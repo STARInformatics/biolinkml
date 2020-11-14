@@ -27,11 +27,12 @@ The 3 core modeling elements in blml are *types*, *classes*, and *slots*:
 
 A [schema](https://biolink.github.io/biolinkml/docs/SchemaDefinition) is a collection of these elements.
 
-The blml also defines basic mechanisms for model element inheritance: **is_a**, **mixin** and **abstract** 
-properties for both classes and slots, plus a **typeof** property for types. In addition, the 
-**subclass_of** property can anchor a class to the semantics of an ontology term in an external 
-3rd party (but model-designated) ontology. Semantic constraints to 'internal' model slot or class 
-hierarchies are similarly constrained by **domain**, **range** and  **subproperty_of** properties.
+The blml also defines basic mechanisms to specify  model element inheritance relationships: **is_a**, **mixin** and 
+**abstract** properties for both classes and slots.  The **typeof** property aliases types to value range of the 
+designated built-in primitive types. In addition, the **subclass_of** property can anchor a class to a specific 
+ontology term in the inheritance hierarchy of an external 3rd party (but model-designated) ontology. Semantic 
+anchoring to 'internal' model slot or class hierarchies is similarly specified by **domain**, **range** and 
+**subproperty_of** properties.
  
 blml is intended to be used in a variety of modeling contexts: JSON
 documents, RDF graphs, RDF* graphs and property graphs, as well as
